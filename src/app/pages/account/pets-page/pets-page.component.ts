@@ -9,7 +9,7 @@ export class PetsPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

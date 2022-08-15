@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
-import { CustomValidator } from '../validators/curstom.validator';
-
+import { CustomValidator } from 'src/app/validators/custom.validator';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup-page',
@@ -18,7 +18,7 @@ export class SignupPageComponent implements OnInit {
     private router: Router,
     private service: DataService,
     private fb: FormBuilder,
-    // private toastr: ToastrService
+    private toastr: ToastrService
   ) {
     this.form = this.fb.group({
       name: ['', Validators.compose([
@@ -57,7 +57,7 @@ export class SignupPageComponent implements OnInit {
       .subscribe(
         (data: any) => {
           this.busy = false;
-          // this.toastr.success(data.message, 'Bem-vindo!');
+          this.toastr.success(data.message, 'Bem-vindo!');
           this.router.navigate(['/login']);
         },
         (err) => {

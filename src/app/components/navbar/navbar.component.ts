@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
-import { Security } from 'src/app/util/security.util';
+import { Security } from 'src/app/utils/security.util';
 
 @Component({
   selector: 'app-navbar',

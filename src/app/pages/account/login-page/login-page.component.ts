@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
+import { CustomValidator } from 'src/app/validators/custom.validator';
+import { Security } from 'src/app/utils/security.util';
 import { Router } from '@angular/router';
-import { Security } from 'src/app/util/security.util';
-import { CustomValidator } from 'src/app/validators/curstom.validator';
 import { User } from 'src/app/models/user.model';
 
 @Component({
