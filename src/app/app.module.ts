@@ -12,6 +12,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ResetPasswordPageComponent } from './pages/reset-password-page/reset-password-page.component';
 import { DataService } from './services/data.service';
 import { SignupPageComponent } from './signup-page/signup-page.component';
+import { PetsPageComponent } from './pages/pets-page/pets-page.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
     LoginPageComponent,
     SignupPageComponent,
     ResetPasswordPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    PetsPageComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
